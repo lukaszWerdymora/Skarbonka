@@ -1,0 +1,35 @@
+body
+{
+	
+		background-color: #222222;
+		font-size:20px;
+		
+	
+}
+#wrapped
+{
+	width:1000px;
+	margin-left:auto;
+	margin-right:auto;
+}
+#topbar
+{
+	
+	
+	margin-top: 25px;
+	background-color: #85bb65;
+	padding: 5px;
+	font-size: 35px;
+	text-align:center;
+	letter-spacing:1px;
+	color: #444444;
+	border-radius:5px;
+}
+
+#loogedUser
+{
+	margin-top:15px;
+	text-align:right;
+	color: #dddddd;
+	
+}

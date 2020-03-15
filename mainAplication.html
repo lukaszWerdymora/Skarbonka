@@ -1,0 +1,43 @@
+<?php
+		session_start();
+		if(!isset($_SESSION['loggedUser']))
+		{
+			header ('Location: index.php');
+			exit();
+		}
+		
+?>
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+	<meta charset="utf-8" />
+	<title>Skarbonka</title>
+	<meta name="description" content="Program do monitorwania domowego budżetu" />
+	<meta name="keywords" content="Budżet" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		
+	<link rel="stylesheet" href="styleMainAplication.css" type="text/css" />
+	<link rel="stylesheet" href="css/fontello.css" type="text/css" />
+	
+</head>
+
+<body>
+	<div id="wrapped">
+		<div id="topbar">
+			<i class="icon-money-1"></i>
+			Skarbonka- aplikacja do zarządzani domowym budżetem
+			<i class="icon-money-1"></i>
+		</div>
+		<div id="loogedUser">		
+			<?php
+	
+				echo "Zalogowany(na) jako: ".$_SESSION['name']." ";
+				
+				echo '<a href="logout.php">| Wyloguj sie |</a>';
+	
+			?>
+		</div>	
+	</div>
+</body>
+
+</html>
