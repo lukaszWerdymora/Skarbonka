@@ -1,0 +1,91 @@
+
+
+<!--<?php
+		session_start();
+		if(!isset($_SESSION['loggedUser']))
+		{
+			header ('Location: index.php');
+			exit();
+		}
+		
+?>
+-->
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+	<meta charset="utf-8" />
+	<title>Skarbonka</title>
+	<meta name="description" content="Program do monitorwania domowego budżetu" />
+	<meta name="keywords" content="Budżet" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		
+	<link rel="stylesheet" href="mainAplication.css" type="text/css" />
+	<link rel="stylesheet" href="css/fontello.css" type="text/css" />
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap&subset=latin-ext" rel="stylesheet">
+	
+</head>
+
+<body>
+	<div id="wrapped">
+		<div id="topbar">
+			<i class="icon-money-1"></i>
+			Skarbonka-aplikacja do zarządzani domowym budżetem
+			<i class="icon-money-1"></i>
+		</div>
+		<div id="loogedUser">	
+		
+		Zalogowany (na) jako: NAME
+		<a href ="logout.php" class="logoutHref"> | Wyloguj się  | </a>
+<!--		
+			<?php
+	
+				echo "Zalogowany(na) jako: ".$_SESSION['name']." ";
+				
+				echo '<a href="logout.php">| Wyloguj sie |</a>';
+	
+			?>
+-->
+		</div>	
+		<div id= "options"> 
+			<div class= "upperTile">
+				<a href="toPrintIncomes.html" class="tileLink"> Wyświetl<br/> wszystkie<br/> wpływy</a>
+			</div>
+			
+			<div class="upperTile">
+				<a href="toPrintExpenses.html" class="tileLink"> Wyświetl<br/> wszystkie <br/>wydatki</a>
+			</div>
+			
+			<div class="upperTile">
+			
+				<a href="addIncom.html" class="tileLink"> Dodaj<br/> wpływ</a>
+			</div>
+			<div class="upperTile">
+				<a href="addExpense.html"class="tileLink"> Dodaj <br/>wydatek</a>
+			</div>
+			
+			<div style="clear:both;"></div>
+			<div class= "lowerTile">
+				<a href="monthlyBalance.html"class="monhlyBalnce">Bilans finansowy w obecnym miesiącu</a>
+			</div>
+		</div>
+		<div id="applicationForm">
+			<form action = "addingValue" method = "post">
+				<div class="labelInput">Podaj nazwe wydatku</div>
+				<input type = "text"><br/>
+				<div class="labelInput">Podaj tag wydatku</div>
+				<input type = "text"><br/>
+				<div class="labelInput">Podaj kwotę wydatku</div>
+				<input type = "text"><br/>
+				<div class="labelInput" >Podaj datę wydatku</div>
+				<input type = "text" placeholder="(format daty:RRRRMMDD)" onfocus="this.placeholder=''" onblur="this.placeholder='(format daty:RRRRMMDD)'"><br/>
+				<div class="labelInput">Uwagi </div>
+				<input type = "text">
+				<div style="clear:both"></div>
+			</form>
+			
+		</div>
+		<div id="fotter"> Wszelkie prawa zastrzeżone </div>
+	</div>
+</body>
+
+</html>
