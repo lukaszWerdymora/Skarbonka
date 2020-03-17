@@ -1,0 +1,108 @@
+
+
+<!--<?php
+		session_start();
+		if(!isset($_SESSION['loggedUser']))
+		{
+			header ('Location: index.php');
+			exit();
+		}
+		
+?>
+-->
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+	<meta charset="utf-8" />
+	<title>Skarbonka</title>
+	<meta name="description" content="Program do monitorwania domowego budżetu" />
+	<meta name="keywords" content="Budżet" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		
+	<link rel="stylesheet" href="mainAplication.css" type="text/css" />
+	<link rel="stylesheet" href="css/fontello.css" type="text/css" />
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap&subset=latin-ext" rel="stylesheet">
+	
+</head>
+
+<body>
+	<div id="wrapped">
+		<div id="topbar">
+			<i class="icon-money-1"></i>
+			Skarbonka-aplikacja do zarządzani domowym budżetem
+			<i class="icon-money-1"></i>
+		</div>
+		<div id="loogedUser">	
+		
+		Zalogowany (na) jako: NAME
+		<a href ="logout.php" class="logoutHref"> | Wyloguj się  | </a>
+<!--		
+			<?php
+	
+				echo "Zalogowany(na) jako: ".$_SESSION['name']." ";
+				
+				echo '<a href="logout.php">| Wyloguj sie |</a>';
+	
+			?>
+-->
+		</div>	
+		<div id= "options"> 
+			<div class= "upperTile">
+				<a href="toPrintIncomes.html" class="tileLink"> Wyświetl<br/> wszystkie<br/> wpływy</a>
+			</div>
+			
+			<div class="upperTile">
+				<a href="toPrintExpenses.html" class="tileLink"> Wyświetl<br/> wszystkie <br/>wydatki</a>
+			</div>
+			
+			<div class="upperTile">
+			
+				<a href="addIncom.html" class="tileLink"> Dodaj<br/> wpływ</a>
+			</div>
+			<div class="upperTile">
+				<a href="addExpense.html"class="tileLink"> Dodaj <br/>wydatek</a>
+			</div>
+			
+			<div style="clear:both;"></div>
+			<div class= "lowerTile">
+				<a href="monthlyBalance.html"class="monhlyBalnce">Bilans finansowy w obecnym miesiącu</a>
+			</div>
+		</div>
+		<div id="tableContent">
+			<table summary="Tabela z wpływami" class = "tableIncomesExpensesBalance">
+				<tbody>
+				<tr>
+					<td id="NextItem"> L.P.</td>
+					<td id="idIncomeExpenses"> idExpenses</td>
+					<td id="name"> Wydatek</td>
+					<td id="quota"> Kwota</td>
+					<td id="current"> Waluta</td>
+					<td id="date"> Date</td>
+					<td id="note"> Note</td>
+				</tr>	
+				<tr>
+					<td id="NextItem"> 1</td>
+					<td id="idIncome"> 1</td>
+					<td id="name"> Rata kredytu</td>
+					<td id="quota"> 1500</td>
+					<td id="current"> PLN</td>
+					<td id="date"> 20200101</td>
+					<td id="note"> Uwagi</td>
+				</tr>
+				<tr>
+					<td id="NextItem"> 2</td>
+					<td id="idIncomeExpenses"> 2</td>
+					<td id="name">Rata leasing Subaru</td>
+					<td id="quota"> 1500</td>
+					<td id="current"> PLN</td>
+					<td id="date"> 20200102</td>
+					<td id="note"> Uwagi</td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+		<div id="fotter"> Wszelkie prawa zastrzeżone </div>
+	</div>
+</body>
+
+</html>
